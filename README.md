@@ -2,12 +2,12 @@
 
 A tiny Rust WebAssembly project that drives the DOM with wasm-bindgen.
 
-I wrote this to see how little it takes to touch the browser's DOM from Rust. No framework, no glue library. I just declare the browser APIs I need with `extern "C"` and call them like normal functions.
+I wanted to see what it takes to touch the browser's DOM from Rust. The crate declares the browser APIs it needs with `extern "C"` and calls them like plain functions.
 
-It exports two functions back to JavaScript:
+Two functions are exported to JavaScript:
 
-- `run_alert(item)` - pops a browser alert with your text
-- `create_stuff()` - makes a `div` and a `p` and drops them into the page body
+- `run_alert(item)` shows a browser alert.
+- `create_stuff()` adds a `div` and a `p` to the page body.
 
 ## Running it
 
@@ -19,6 +19,6 @@ npm install
 npm run serve
 ```
 
-Open the page and it prints "Hello from WASM" and fires an alert.
+Open the page. It prints "Hello from WASM" and shows an alert.
 
-That is the whole thing. I built it as an excuse to play with wasm-bindgen.
+I built this to learn wasm-bindgen.
